@@ -1,0 +1,41 @@
+<h1>Listing notes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artist</th>
+      <th>Track Name</th>
+      <th>Year</th>
+      <th>Genre</th>
+      <th>Description</th>
+      <th>Break</th>
+      <th>Format</th>
+      <th>Album</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.artist %></td>
+        <td><%= note.name %></td>
+        <td><%= note.year %></td>
+        <td><%= note.genre %></td>
+        <td><%= note.description %></td>
+        <td><%= note.break %></td>
+        <td><%= note.format %></td>
+        <td><%= note.album %></td>
+        <td><%= note.image %></td>
+        <td><%= link_to 'Show', note %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure yo?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Note', new_note_path %>
