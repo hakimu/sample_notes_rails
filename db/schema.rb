@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025190218) do
+ActiveRecord::Schema.define(version: 20180925021723) do
 
   create_table "notes", force: true do |t|
     t.string   "artist"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20151025190218) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.string   "label"
   end
 
 end

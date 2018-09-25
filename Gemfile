@@ -16,6 +16,12 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'unicorn'
 
+gem 'rspec-rails'
+
+gem 'hirb'
+
+gem 'react-rails'
+
 gem 'newrelic_rpm'
 
 # Use jquery as the JavaScript library
